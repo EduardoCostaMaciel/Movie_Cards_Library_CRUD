@@ -4,6 +4,8 @@ import Loading from '../components/Loading';
 
 import * as movieAPI from '../services/movieAPI';
 
+import './movieList.css';
+
 class MovieList extends Component {
   constructor() {
     super();
@@ -34,7 +36,7 @@ class MovieList extends Component {
     if (loading === true) return <Loading />;
 
     return (
-      <div data-testid="movie-list">
+      <div data-testid="movie-list" className="movieList-container">
         {movies.map((movie) => <MovieCard key={ movie.title } movie={ movie } />)}
       </div>
     );

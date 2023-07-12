@@ -5,6 +5,9 @@ import PropTypes from 'prop-types';
 import * as movieAPI from '../services/movieAPI';
 import { Loading } from '../components';
 
+import './movieList.css';
+import './movieDetails.css';
+
 class MovieDetails extends Component {
   constructor() {
     super();
@@ -49,21 +52,25 @@ class MovieDetails extends Component {
     const { match: { params: { id } } } = this.props;
 
     return (
-      <div data-testid="movie-details">
-
+      <div
+        data-testid="movie-details"
+        className="movieDetails-container-card"
+      >
         <p>{`Title: ${title}`}</p>
-
         <img alt="Movie Cover" width="250px" src={ `../${imagePath}` } />
-        <p>{ `Subtitle: ${subtitle}` }</p>
-        <p>{ `Storyline: ${storyline}` }</p>
-        <p>{ `Genre: ${genre}` }</p>
-        <p>{ `Rating: ${rating}` }</p>
-
-        <Link to="/">VOLTAR</Link>
-        <br />
-        <Link to={ `/movies/${id}/edit` }>EDITAR</Link>
-        <br />
-        <Link to="/" onClick={ this.handleDelete }>DELETAR</Link>
+        <div className="movieDetails-container-card-div">
+          <p>{ `Subtitle: ${subtitle}` }</p>
+          <p>{ `Storyline: ${storyline}` }</p>
+          <p>{ `Genre: ${genre}` }</p>
+          <p>{ `Rating: ${rating}` }</p>
+        </div>
+        <div className="movieDetails-container-card-link">
+          <div>
+            <Link to="/">VOLTAR</Link>
+            <Link to={ `/movies/${id}/edit` }>EDITAR</Link>
+          </div>
+          <Link to="/" onClick={ this.handleDelete }>DELETAR</Link>
+        </div>
       </div>
     );
   }
