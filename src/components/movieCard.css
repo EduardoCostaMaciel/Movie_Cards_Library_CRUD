@@ -1,0 +1,35 @@
+.movieCard-container {
+  background-color: #f0f5f8;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1) , 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 20rem;
+}
+
+.movieCard-container img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100%;
+}
+
+.movieCard-container div {
+  flex-grow: 1;
+  padding: 0.5rem;
+}
+
+.movieCard-container a {
+  align-self: flex-end;
+  border: solid 1px #292828;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1) , 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 0.5rem;
+  width: max-content;
+}
+
+.movieCard-title {
+  padding-bottom: 1rem;
+}

@@ -2,6 +2,9 @@
   "name": "sd-0x-block14-project-movie-card-library-crud",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "14.x"
+  },
   "dependencies": {
     "acorn": "7.1.1",
     "minimist": "1.2.3",

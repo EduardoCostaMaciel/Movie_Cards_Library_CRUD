@@ -7,11 +7,13 @@ import EditMovie from './pages/EditMovie';
 import NotFound from './pages/NotFound';
 import AddCart from './components/AddCart';
 
+import './App.css';
+
 function App() {
   return (
     <BrowserRouter>
-      <div>
-        Movie Card Library CRUD !
+      <div className="App">
+        <span>Movie Card Library CRUD</span>
         <Switch>
           <Route
             path="/movies/:id/edit"

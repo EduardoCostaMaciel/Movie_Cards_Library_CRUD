@@ -5,6 +5,8 @@ import { Redirect } from 'react-router';
 import { Loading, MovieForm } from '../components';
 import * as movieAPI from '../services/movieAPI';
 
+import './newMovie.css';
+
 class EditMovie extends Component {
   constructor(props) {
     super(props);
@@ -49,7 +51,7 @@ class EditMovie extends Component {
     if (status === 'loading') return <Loading />;
 
     return (
-      <div data-testid="edit-movie">
+      <div data-testid="edit-movie" className="newMovie-container">
         <MovieForm movie={ movie } onSubmit={ this.handleSubmit } />
       </div>
     );
